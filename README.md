@@ -1,6 +1,6 @@
 
 
-![CI](https://github.com/Mariza0/ahj-hw2/actions/workflows/web.yml/badge.svg)
+[![Build status](https://ci.appveyor.com/api/projects/status/2ckrvirorh6wgu0a?svg=true)](https://ci.appveyor.com/project/Mariza0/ahj-hw2)
 
 
 [Ссылка на Github Pages](https://mariza0.github.io/ahj-hw2/)
