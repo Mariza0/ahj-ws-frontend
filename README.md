@@ -3,7 +3,7 @@
 ![CI](https://github.com/Mariza0/ahj-hw2/actions/workflows/web.yml/badge.svg)
 
 
-![Ссылка на Github Pages](https://mariza0.github.io/ahj-hw2/)
+[Ссылка на Github Pages](https://mariza0.github.io/ahj-hw2/)
 
 # Домашнее задание к занятию "2. DOM"
 
