@@ -1,5 +1,5 @@
 body {
-    color: red;
+    color: #999;
 }
 
 .playground {
@@ -16,6 +16,7 @@ body {
     height: 20vh;
     border: 1px solid black;
     position: relative;
+    margin: 10px;
   }
   
 .playground-img {
