@@ -5,25 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Document</title>
+  <style>
+    .subscriptions, .chat {
+      white-space: pre;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="subscribe">
-    <form class="subscribe-form" method="POST" action="http://localhost:7070">
-      <input class="name" name="name" class="input" required>
-      <input class="phone" name="phone" class="input" required>
-      <button class="btn">Записаться</button>
-      <button class="unsubscribe-btn">Отписаться</button>
-    </form>
+<div class="container">
+  <div class="nicknames">Сейчас в чате:
+  <div class="users"></div>
+</div>
+  <div class="block-chat">
+    <div class="subscriptions">
+      <!-- <div class="message-container">
+        <div class="message"></div>
+      </div> -->
+      <!-- сообщения от меня -->
+      <!-- <div class="myMessage-container">
+        <div class="myMessage"></div>
+      </div> -->
+    </div>
+      <div class="block-button">
+        <input type="text" class="chat-message"/>
+        <!-- <button class="btn btn-success chat-send">Отправить</button> -->
+      </div>
+    
   </div>
   
-  <form class="upload-form">
-    <input type="file" name="file" accept="image/*">
-    <input type="text" name="name" value="My Photo">
-    <button>Upload</button>
+
+</div>
+
+  <!-- псевдоним -->
+  <form class="pseudonim-form">
+    <div class="pseudonim-content">
+    <div class="form-group">
+      <!-- <button class="btn closePopup">&times;</button> -->
+      </div>
+      <div class="form-group">Выберите псевдоним</div>
+      <div class="form-group">
+        <input type="text" class="input-class" maxlength="30"/>
+      </div>
+      <!-- <button class="btn btn-check_name btn-outline-success">Продолжить</button> -->
+  </div>
   </form>
-
 </body>
-
 </html>

@@ -1,38 +1,43 @@
-.ticket {
-  display: flex;
-}
 
-.btn-success {
-  margin-right: 10px;
-}
 
-/* .popup-ticket.disable {
-  display: none;
-} */
-
-.popup-ticket {
+.pseudonim-form {
   display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(61, 59, 59, 0.7);
     justify-content: center;
     align-items: center;
 }
 
-.popup-content {
-  background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    height:50%;
+.form-group {
+  text-align: center;
+  width:90%;
+  margin-bottom: 20px;
 }
 
-.close-popup {
+.pseudonim-content {
+
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 5px;
+    text-align: left;
+    position: relative;
+    width: 50%;
+    /* height:50%; */
+    align-content: flex-start; /* Высота контейнера по содержимому */
+    align-items: stretch; /* Центрирование по вертикали */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.closePopup {
   position: absolute;
     top: 10px;
     right: 10px;
@@ -40,17 +45,95 @@
     cursor: pointer;
 }
 
-.form-group {
-  text-align: center; /* Выравниваем текст по центру */
-  margin-bottom: 20px;
+
+.input-class {
+  width: 70%; 
 }
 
-.form-group-line {
+.chat-message {
+  width: 70%; 
+}
+
+.subscriptions {
+  /* display: flex; */
+  height: 80vh; 
+  overflow-y: auto;
+  position: relative; 
+
+  padding: 20px;
+  
+}
+
+.block-button {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+ .block-button {
+  width: 100%;
+  padding: 20px;
+  
+} 
+
+.chat-send {
+  margin-left: 30px;
+}
+
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+.nicknames {
+  margin-right: 10%;
+  padding: 20px;
+}
+
+.block-chat {
+  border: 1px solid rgb(107, 106, 106);
+  border-radius: 1%;
+  width: 100%;
+
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message_container {
+  display: flex;
+}
+
+.my-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-message_container {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.nick-name {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.nick-name::before {
+  content: '';
   display: inline-block;
-
-}
-
-label {
-  display: block; /* Делаем метку блочным элементом */
-  margin-bottom: 5px; /* Добавляем небольшой отступ между меткой и элементом ввода */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgb(58, 57, 57); 
+  background-color: transparent; 
+  margin-right: 5px; 
 }
