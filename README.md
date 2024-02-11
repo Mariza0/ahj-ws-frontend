@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/6h8y47e26kvg4pmg?svg=true)](https://ci.appveyor.com/project/Mariza0/ahj-ws-frontend)
 
-[Ссылка на проект](https://mariza0.github.io/ahj-http-frontend)
+[Ссылка на проект](https://mariza0.github.io/ahj-ws-frontend/)
 
 # Домашнее задание к занятию "8. EventSource, Websockets"
 Правила сдачи задания:
@@ -12,7 +12,7 @@
 5. вто-тесты писать не требуется
 6. Серверная часть должна быть выложена на [Render](https://render.com/). Посмотрите инструкцию или документацию, как развертывать серверную часть на Render.
 ## Чат
-_____________
+
 ### Легенда
 
 В рамках реализации корпоративного портала вам поручили организовать чат, и, конечно же, вы решили для этого использовать веб-сокеты.
