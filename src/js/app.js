@@ -94,6 +94,16 @@ class SubscriptionApi {
   }
 }
 
+/////////class пользователей
+
+// class Users {
+//   constructor(ws) {
+//     this.
+//   }
+// }
+
+///////////////////////////
+
 const chatSend = document.querySelector(".chat-message");
 
 const nameSend = document.querySelector(".input-class");
@@ -132,7 +142,8 @@ ws.addEventListener("message", (e) => {
   if (data.type === "nicknameStatus") {
     if (data.isAvailable) {
       // отправляем на сервер уведомление о присоединении к чату
-      ws.send(JSON.stringify({ type: "joinChat", nickname: data.nickname }));
+      ws.send(JSON.stringify({ type: "joinChat", nickname: myNickName}));//data.nickname }));
+      
       popup.style.display = "none";
     } else {
       alert("Этот никнейм уже занят. Пожалуйста, выберите другой.");
@@ -143,7 +154,8 @@ ws.addEventListener("message", (e) => {
 });
 
 ws.addEventListener("close", () => {
-  ws.send(JSON.stringify({ type: "leaveChat", nickname: myNickName }));
+  // ws.send(JSON.stringify({ type: "leaveChat", nickname: myNickName }));
+  // console.log(`удалился пользователь ${myNickName}`)
   console.log("ws close");
 });
 
@@ -168,5 +180,13 @@ chatSend.addEventListener("keydown", (e) => {
     document.querySelector(".chat-message").value = "";
   }
 });
+
+// window.addEventListener('beforeunload', function (event) {
+//   event.preventDefault();
+//   // Отправить событие о выходе из чата
+//   ws.send(JSON.stringify({ type: "leaveChat"}));//, nickname: myNickName }));
+//   // Закрыть соединение WebSocket
+//   ws.close();
+// });
 
 window.api = new SubscriptionApi("http://localhost:7070/");
