@@ -94,16 +94,6 @@ class SubscriptionApi {
   }
 }
 
-/////////class пользователей
-
-// class Users {
-//   constructor(ws) {
-//     this.
-//   }
-// }
-
-///////////////////////////
-
 const chatSend = document.querySelector(".chat-message");
 
 const nameSend = document.querySelector(".input-class");
@@ -180,13 +170,5 @@ chatSend.addEventListener("keydown", (e) => {
     document.querySelector(".chat-message").value = "";
   }
 });
-
-// window.addEventListener('beforeunload', function (event) {
-//   event.preventDefault();
-//   // Отправить событие о выходе из чата
-//   ws.send(JSON.stringify({ type: "leaveChat"}));//, nickname: myNickName }));
-//   // Закрыть соединение WebSocket
-//   ws.close();
-// });
 
 window.api = new SubscriptionApi("http://localhost:7070/");
