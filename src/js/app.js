@@ -171,5 +171,5 @@ chatSend.addEventListener("keydown", (e) => {
   }
 });
 
-const port = process.env.PORT || 7070;
+const port = 7070;
 window.api = new SubscriptionApi(`http://localhost:${port}/`);
