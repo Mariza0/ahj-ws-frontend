@@ -99,21 +99,24 @@ const chatSend = document.querySelector(".chat-message");
 const nameSend = document.querySelector(".input-class");
 let myNickName;
 
-const ws = new WebSocket("ws://localhost:7070/ws");
+const ws = new WebSocket("wss://ahj-ws-backend-7dj6.onrender.com"); //("ws://localhost:7070/ws");
 
 ws.addEventListener("open", (e) => {
   console.log(e);
   console.log("ws open");
-});
+
 
 nameSend.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
     if (nameSend.value == "") return;
     myNickName = nameSend.value;
+    console.log('отправка checkNickname на сервер')
     ws.send(JSON.stringify({ type: "checkNickname", nickname: myNickName }));
   }
 });
+
+
 
 ws.addEventListener("message", (e) => {
   const data = JSON.parse(e.data);
@@ -132,8 +135,8 @@ ws.addEventListener("message", (e) => {
   if (data.type === "nicknameStatus") {
     if (data.isAvailable) {
       // отправляем на сервер уведомление о присоединении к чату
-      ws.send(JSON.stringify({ type: "joinChat", nickname: myNickName}));//data.nickname }));
-      
+      ws.send(JSON.stringify({ type: "joinChat", nickname: myNickName })); //data.nickname }));
+
       popup.style.display = "none";
     } else {
       alert("Этот никнейм уже занят. Пожалуйста, выберите другой.");
@@ -143,9 +146,9 @@ ws.addEventListener("message", (e) => {
   }
 });
 
+});
+
 ws.addEventListener("close", () => {
-  // ws.send(JSON.stringify({ type: "leaveChat", nickname: myNickName }));
-  // console.log(`удалился пользователь ${myNickName}`)
   console.log("ws close");
 });
 
@@ -172,4 +175,4 @@ chatSend.addEventListener("keydown", (e) => {
 });
 
 const port = 7070;
-window.api = new SubscriptionApi(`http://localhost:${port}/`);
+window.api = new SubscriptionApi('https://ahj-ws-backend-7dj6.onrender.com:10000/'); //(`http://localhost:${port}/`);
