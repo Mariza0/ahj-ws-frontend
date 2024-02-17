@@ -10,7 +10,7 @@ export class webSocketClient {
     ) {
       this.ws = new WebSocket("ws://localhost:7070/ws");
     } else {
-      this.ws = new WebSocket("wss://mariza0.github.io/ahj-ws-frontend/");
+      this.ws = new WebSocket("wss://ahj-ws-backend-7dj6.onrender.com/");
     }
     this.ws.addEventListener("open", this.handleOpen.bind(this));
     this.ws.addEventListener("message", this.handleMessage.bind(this));
